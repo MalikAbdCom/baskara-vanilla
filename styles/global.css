@@ -74,6 +74,9 @@ html, *, body {
 .navigation > ul {
     gap: 1rem;
 }
+.navigation-links {
+    display: none;
+}
 header{
     display: grid;
     place-items: center;
@@ -94,6 +97,7 @@ header::before  {
     background-color: rgba(0,0,0,0.5);
 }
 header > h1 {
+    width: 90%;
     font-size: 3rem;
     color: white;
     z-index: 1;
@@ -169,6 +173,46 @@ footer div:last-child img{
     height: 100%;
     object-fit: scale-down;
 }
+.navigation-links--mobile-container {
+    position: relative;
+}
+.navigation-links--mobile {
+    transition: 200ms all ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    height: 0;
+    visibility: hidden;
+    width: 150px;
+    text-align: right;
+    background-color: white;
+    border: 2.5px solid var(--primary);
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+}
+[href="#mobile-links"]{
+    color: var(--primary);
+    padding-right: 0.5rem;
+    display: block;
+}
+[href="#mobile-links"] svg{
+    height: 30px;
+    width: 30px;
+}
+.navigation-links--mobile:target{
+    height: fit-content;
+    visibility: visible;
+    opacity: 1;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 @media screen and (min-width: 768px){
     .navigation-container {
         padding-top: 1rem;
@@ -179,6 +223,9 @@ footer div:last-child img{
     }
     .navigation .img {
         height: 60px;
+    }
+    .navigation-links {
+        display: flex;
     }
     header > h1 {
         font-size: 6rem;
@@ -214,6 +261,10 @@ footer div:last-child img{
     footer div:last-child {
         width: 33%;
         height: 150px;
+    }
+    .footer-container {
+        justify-content: space-between;
+        flex-direction: row;
     }
 }
 
