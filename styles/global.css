@@ -1,0 +1,219 @@
+:root {
+    --secondary : #E7BAA0;
+    --primary : #3C8E90;
+    --background: #fffbeb;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+html, *, body {
+    font-family: 'Inter', sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+
+/* navigation */
+.navigation-container {
+    padding-top: 0.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+}
+.navigation {
+    position: relative;
+    background-color: #fff;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 0.2rem;
+    border: 3px solid var(--primary);
+    box-shadow: 5px 5px var(--secondary);
+    border-radius: 0.5rem;
+}
+.navigation li{
+    list-style-type: none;
+    transition: 300ms all ease-in-out;
+    text-transform: capitalize;
+}
+.navigation li:hover{
+    transform: translateY(-2px);
+}
+.navigation li a {
+    color: #451a03;
+    text-decoration: none;
+}
+.navigation > div:first-child{
+    gap: 1rem;
+}
+.navigation .img {
+    height: 50px;
+    width: fit-content;
+}
+.navigation > ul {
+    gap: 1rem;
+}
+header{
+    display: grid;
+    place-items: center;
+    background-image: url("../assets/images/hero.jpg");
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    border-bottom: 2px solid var(--primary);
+}
+header::before  {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+header > h1 {
+    font-size: 3rem;
+    color: white;
+    z-index: 1;
+    font-weight: 100;
+}
+.article {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+.article h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.article p{
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 500px;
+}
+.documentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.documentation-grid img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 300ms all ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.documentation-grid img:hover {
+    transform: translateY(-2px) scale(1.03) rotateZ(-2deg);
+}
+.documentation-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 3rem;
+}
+.documentation-container h2{
+    margin-bottom: 1rem;
+}
+footer {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+footer div{
+    width: 50%;
+}
+footer div h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+footer div:first-child p {
+    max-width: 450px;
+}
+.footer-links a{
+    color: var(--primary);
+    display: flex;
+    margin-right: 1rem;
+    align-items: start;
+    gap: 0.5rem;
+}
+footer div:last-child img{
+    height: 100%;
+    object-fit: scale-down;
+}
+@media screen and (min-width: 768px){
+    .navigation-container {
+        padding-top: 1rem;
+    }
+    .navigation{
+        width: 90%;
+        padding: 1rem 0.4rem;
+    }
+    .navigation .img {
+        height: 60px;
+    }
+    header > h1 {
+        font-size: 6rem;
+    }
+    .article {
+        max-width: 1280px;
+        margin: 0 auto;
+        width: 90%;
+        padding: 4rem 0;
+        gap: 2rem;
+        flex-direction: row;
+    }
+    .article div {
+        width: 50%;
+    }
+    .documentation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .documentation-container {
+        padding-bottom: 6rem;
+        padding-top: 3rem;
+    }
+    .documentation-container h2{
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    footer{
+        gap: 4rem;
+    }
+    footer div:last-child {
+        width: 33%;
+        height: 150px;
+    }
+}
+
