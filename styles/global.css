@@ -102,6 +102,7 @@ header > h1 {
     color: white;
     z-index: 1;
     font-weight: 100;
+    text-align: left;
 }
 .article {
     max-width: 1280px;
@@ -144,6 +145,9 @@ header > h1 {
 }
 .documentation-container h2{
     margin-bottom: 1rem;
+}
+.footer-bg{
+    background-color: #fff;
 }
 footer {
     max-width: 1280px;
@@ -217,6 +221,9 @@ footer div:last-child img{
     .navigation-container {
         padding-top: 1rem;
     }
+    .navigation-links--mobile-container{
+        display: none;
+    }
     .navigation{
         width: 90%;
         padding: 1rem 0.4rem;
@@ -229,6 +236,7 @@ footer div:last-child img{
     }
     header > h1 {
         font-size: 6rem;
+        text-align: center;
     }
     .article {
         max-width: 1280px;

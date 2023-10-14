@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kamus</title>
+    <!--reset css-->
+    <link rel="stylesheet" href="../styles/reset.css">
+    <!--end of reset css-->
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/kamus.css">
+
+    <!-- script untuk menampilkan kata perhuruf-->
+    <script defer src="kata.js" type="module"></script>
+</head>
+<body>
+<div class="navigation-container">
+    <nav class="navigation flex space-between items-center">
+        <div class="flex items-center">
+            <img class="img" src="../assets/images/logo-kemendikbud.png" alt="">
+            <img class="img" src="../assets/images/logo-kbkm.png" alt="">
+            <img class="img" src="../assets/images/logo-baskara.png" alt="">
+        </div>
+        <div class="navigation-links--mobile-container">
+            <a href="#mobile-links">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-menu">
+                    <line x1="4" x2="20" y1="12" y2="12"/>
+                    <line x1="4" x2="20" y1="6" y2="6"/>
+                    <line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </a>
+            <ul class="navigation-links--mobile" id="mobile-links">
+                <li><a href="../index.html">home</a></li>
+                <li><a href="../page/translate.html">translator</a></li>
+                <li><a href="#">kamus</a></li>
+                <li><a href="../page/tentang.html">tentang</a></li>
+                <li><a href="../page/kontak.html">kontak</a></li>
+            </ul>
+        </div>
+        <ul class="navigation-links">
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../page/translate.html">translator</a></li>
+            <li><a href="#">kamus</a></li>
+            <li><a href="../page/tentang.html">tentang</a></li>
+            <li><a href="../page/kontak.html">kontak</a></li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <h1>kamus<br><span style="font-size: 2rem">bahasa sawang</span></h1>
+    <section>
+        <div class="pencarian-container">
+            <label for="pencarian-kamus"><input type="search" name="pencarian" id="pencarian-kamus" placeholder="Cari kata..."></label>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                     class="lucide lucide-search">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.3-4.3"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+    <section>
+        <!--filter diawali-->
+        <div class="filter-diawali">
+            <label for="diawali">Diawali huruf :</label>
+            <select name="diawali" id="diawali">
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="c">C</option>
+                <option value="d">D</option>
+                <option value="e">E</option>
+                <option value="f">F</option>
+                <option value="g">G</option>
+                <option value="h">H</option>
+                <option value="i">I</option>
+                <option value="j">J</option>
+                <option value="k">K</option>
+                <option value="l">L</option>
+                <option value="m">M</option>
+                <option value="n">N</option>
+                <option value="o">O</option>
+                <option value="p">P</option>
+                <option value="q">Q</option>
+                <option value="r">R</option>
+                <option value="s">S</option>
+                <option value="t">T</option>
+                <option value="u">U</option>
+                <option value="v">V</option>
+                <option value="w">W</option>
+                <option value="x">X</option>
+                <option value="y">Y</option>
+                <option value="z">Z</option>
+            </select>
+        </div>
+        
+        <div id="kamus-container">
+            <div>
+                <h2>Kata</h2>
+                <div id="table-kata-container">
+                    <table id="table-kata">
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h2>Makna</h2>
+                <p id="kamus-makna">
+
+                </p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<div class="footer-bg">
+    <footer class="footer-container">
+        <div>
+            <h2>Tentang Kami</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto assumenda cupiditate eius,
+                eos error illum impedit laudantium minus necessitatibus nesciunt non odio officiis quae recusandae
+                reiciendis sequi tempore voluptatum.</p>
+        </div>
+        <div>
+            <h2>Ikuti Kami</h2>
+            <div class="footer-links">
+                <a href="https://instagram.com/malikabdcom">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path
+                                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5"
+                                                                                           y2="6.5"/></svg>
+                    </span>
+                    Instagram
+                </a>
+                <a href="mailto:emailmalikabdcom@gmail.com">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-mail-plus"><path
+                                d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path
+                                d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M19 16v6"/><path d="M16 19h6"/></svg>
+                    </span>
+                    E-Mail
+                </a>
+                <a href="https://youtube.com/@malikabdcom">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="lucide lucide-youtube"><path
+                                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path
+                                d="m10 15 5-3-5-3z"/></svg>
+                    </span>
+                    YouTube
+                </a>
+            </div>
+        </div>
+        <div>
+            <img src="../assets/images/logo-kbkm.png" alt="">
+        </div>
+    </footer>
+</div>
+</body>
+</html>
